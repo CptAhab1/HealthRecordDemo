@@ -58,6 +58,8 @@ public class HealthRecord {
 
             ssn = scanner.nextInt();
 
+            String ssnString = String.format("%04d",ssn);
+
             if (ssn < 1 || ssn > 999999999 || Long.toString(ssn).length() != 9)
                 System.out.println("This is not a valid SSN.");
 
@@ -102,7 +104,7 @@ public class HealthRecord {
             phoneNumber = scanner.nextLong();
 
             if (phoneNumber < 1 || phoneNumber > 9999999999L || Long.toString(phoneNumber).length() != 10)
-                System.out.println("This is not a valid SSN.");
+                System.out.println("This is not a valid phone number.");
 
         } while (phoneNumber < 1 || phoneNumber > 9999999999L || Long.toString(phoneNumber).length() != 10);
     }
